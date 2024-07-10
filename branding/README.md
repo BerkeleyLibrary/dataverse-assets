@@ -3,15 +3,21 @@
 ## Logos
 
 - Create ‘/usr/local/payara6/glassfish/domains/domain1/docroot/logos/navbar/'
-- Upload logo(s) to new directory
-- run 'curl -X PUT -d '/logos/navbar/logo.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile'
+- Copy contents of logos/navbar to new directory
+- run either:
+    - 'curl -X PUT -d '/logos/navbar/dataverse_logo_prod.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile'
+    - 'curl -X PUT -d '/logos/navbar/dataverse_logo_staging.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile'
 
 ## Custom footer
+**TODO**: this could go in /home/dataverse instead
+
 - Create '/var/www/dataverse/branding'
 - Upload custom-footer.html to new directory
 - Run 'curl -X PUT -d '/var/www/dataverse/branding/custom-footer.html' http://localhost:8080/api/admin/settings/:FooterCustomizationFile'
 
 ## Custom stylesheet
+**TODO**: this could go in /home/dataverse instead
+
 - Upload custom-stylesheet.css to /var/www/dataverse/branding
 - Run 'curl -X PUT -d '/var/www/dataverse/branding/custom-stylesheet.css' http://localhost:8080/api/admin/settings/:StyleCustomizationFile'
 
