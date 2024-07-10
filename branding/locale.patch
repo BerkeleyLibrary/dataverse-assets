@@ -1,0 +1,53 @@
+diff --git a/en_US/Bundle.properties b/en_US/Bundle.properties
+index 10576c0..efec4e9 100644
+--- a/en_US/Bundle.properties
++++ b/en_US/Bundle.properties
+@@ -146,9 +146,9 @@ messages.validation=Validation Error
+ messages.validation.msg=Required fields were missed or there was a validation error. Please scroll down to see details.
+ 
+ # contactFormFragment.xhtml
+-contact.header=Contact {0}
+-contact.dataverse.header=Email Dataverse Contact
+-contact.dataset.header=Email Dataset Contact
++contact.header=Contact UC Berkeley Library Data Services Program
++contact.dataverse.header=Contact UC Berkeley Library Data Services Program
++contact.dataset.header=Contact UC Berkeley Library Data Services Program
+ contact.to=To
+ contact.cc=CC
+ contact.support=Support
+@@ -168,7 +168,7 @@ contact.sum.title=Human Access Validation Answer
+ contact.sum.required=Value is required.
+ contact.sum.invalid=Incorrect sum, please try again.
+ contact.sum.converterMessage=Please enter a number.
+-contact.contact=Contact
++contact.contact=Support
+ # Bundle file editors, please note that these "contact.context" messages are used in tests.
+ contact.context.subject.dvobject={0} contact: {1}
+ contact.context.subject.support={0} support request: {1}
+@@ -310,7 +310,7 @@ user.position.tip=Your role or title at the organization you are affiliated with
+ user.acccountterms=General Terms of Use
+ user.acccountterms.tip=The terms and conditions for using the application and services.
+ user.acccountterms.required=Please check the box to indicate your acceptance of the General Terms of Use.
+-user.acccountterms.iagree=I have read and accept the Dataverse General Terms of Use as outlined above.
++user.acccountterms.iagree=I have read and accept the UC Berkeley Library Dataverse Terms of Use as outlined above.
+ user.createBtn=Create Account
+ user.updatePassword.welcome=Welcome to Dataverse {0}
+ user.updatePassword.warning=Our terms of use have changed, please check the box below and click Continue.
+@@ -364,7 +364,7 @@ login.System=Login System
+ login.forgot.text=Forgot your password?
+ login.builtin=Dataverse Account
+ login.institution=Institutional Account
+-login.institution.blurb=Log in or sign up with your institutional account &mdash; more <a href="{0}/{1}/user/account.html" title="Account Creation + Management - Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
++login.institution.blurb=Login with your UC Berkeley or Lawrence Berkeley National Lab Account to view and download data &mdash; more <a href="{0}/{1}/user/account.html" title="Account Creation + Management - Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
+ login.institution.support.blurbwithLink=Leaving your institution? Please contact {0} for assistance.
+ login.builtin.credential.usernameOrEmail=Username/Email
+ login.builtin.credential.password=Password
+@@ -1403,7 +1403,7 @@ dataset.accessBtn.too.big=The dataset is too large to download. Please select th
+ dataset.accessBtn.original.too.big=The dataset is too large to download in the original format. Please select the files you need from the files table.
+ dataset.accessBtn.archival.too.big=The dataset is too large to download in the archival format. Please select the files you need from the files table.
+ dataset.linkBtn=Link Dataset
+-dataset.contactBtn=Contact Owner
++dataset.contactBtn=Support
+ dataset.shareBtn=Share
+ 
+ dataset.publishBtn=Publish Dataset
