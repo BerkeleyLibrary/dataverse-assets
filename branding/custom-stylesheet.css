@@ -10,8 +10,9 @@ body {
     color: #3174AF !important;
 }
 
-/* this is a default bootstrap rule getting clobbered by the above */
-.pagination > .active > a
+/* tdefault bootstrap rules getting clobbered by the above */
+.pagination > .active > a,
+.btn-primary
 {
     color: #fff;
 }
