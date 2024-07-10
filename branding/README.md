@@ -1,5 +1,7 @@
 # Branding changes
 
+See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/latest/installation/config.html#branding-your-installation) documentation.
+
 ## Logos
 
 - Create ‘/usr/local/payara6/glassfish/domains/domain1/docroot/logos/navbar/'
