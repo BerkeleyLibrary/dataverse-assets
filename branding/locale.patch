@@ -1,5 +1,5 @@
 diff --git a/en_US/Bundle.properties b/en_US/Bundle.properties
-index 10576c0..efec4e9 100644
+index 10576c0..28aa441 100644
 --- a/en_US/Bundle.properties
 +++ b/en_US/Bundle.properties
 @@ -146,9 +146,9 @@ messages.validation=Validation Error
@@ -42,6 +42,15 @@ index 10576c0..efec4e9 100644
  login.institution.support.blurbwithLink=Leaving your institution? Please contact {0} for assistance.
  login.builtin.credential.usernameOrEmail=Username/Email
  login.builtin.credential.password=Password
+@@ -874,7 +874,7 @@ dataverse.publish.btn=Publish
+ dataverse.publish.header=Publish Dataverse
+ dataverse.nopublished=No Published Dataverses
+ dataverse.nopublished.tip=In order to use this feature you must have at least one published dataverse.
+-dataverse.contact=Email Dataverse Contact
++dataverse.contact=Contact UC Berkeley Library Data Services Program
+ dataverse.link=Link Dataverse
+ dataverse.link.btn.tip=Link to Your Dataverse
+ dataverse.link.yourDataverses=Your Dataverse
 @@ -1403,7 +1403,7 @@ dataset.accessBtn.too.big=The dataset is too large to download. Please select th
  dataset.accessBtn.original.too.big=The dataset is too large to download in the original format. Please select the files you need from the files table.
  dataset.accessBtn.archival.too.big=The dataset is too large to download in the archival format. Please select the files you need from the files table.
