@@ -24,11 +24,21 @@
 ## Locale files
 Many display strings are managed in the Dataverse's locale files. See upstream [Internationalization](https://guides.dataverse.org/en/latest/installation/config.html#internationalization) documentation.
 
-- Run git clone https://github.com/GlobalDataverseCommunityConsortium/dataverse-language-packs.git ; cd dataverse-language-packs
-- Run git checkout dataverse-v6.1
-- Run git apply locale.patch
 - Run mkdir /tmp/languages
-- Run cp -R en_US/*.properties /tmp/lamguages
+- Run cp -R locale/*.properties /tmp/languages
 - Run cd /tmp/languages
 - Run zip languages.zip *.properties
 - Run curl http://localhost:8080/api/admin/datasetfield/loadpropertyfiles -X POST --upload-file /tmp/languages/languages.zip -H "Content-Type: application/zip"
+
+### Updating locale files from upstream
+
+This should only be necessary when you upgrade Dataverse.
+
+- Run git clone https://github.com/GlobalDataverseCommunityConsortium/dataverse-language-packs.git ; cd dataverse-language-packs
+- Run git checkout dataverse-v6.1 (or whatever the appropriate tag is for youer version)
+- Run cp -R en_US/* ../locale 
+- Run cd ../locale
+- Run git apply ../locale.patch
+- Review any differences, confirm they're correct 
+- Create a new patch file (git diff -p > ../locale.patch)
+- Commit your changes
