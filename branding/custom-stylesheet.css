@@ -10,6 +10,12 @@ body {
     color: #3174AF !important;
 }
 
+/* this is a default bootstrap rule getting clobbered by the above */
+.pagination > .active > a
+{
+    color: #fff;
+}
+
 /* Custom Footer */
 #custom-footer {
     padding: 20px;
@@ -45,6 +51,10 @@ body {
 
 a#dataverseForm\:j_idt390 {
     display: none;
+}
+
+#idpSelectIdPSelector a.IdPSelectDropDownToggle {
+    visibility: hidden;
 }
 
 .ui-widget {
