@@ -45,7 +45,7 @@ Many display strings are managed in the Dataverse's locale files. See upstream [
 
 ### Likely deployment path
 
-Presuming that this repo is checked out or accessible from /home/dataverse/dataverse=-assets:
+Presuming that this repo is checked out or accessible from /home/dataverse/dataverse-assets:
 
 - Run ./asadmin create-jvm-options '-Ddataverse.lang.directory=/home/dataverse/dataverse-assets/langBundles'
 - Restart Dataverse
