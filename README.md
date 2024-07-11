@@ -18,7 +18,7 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
 **TODO**: this could go in /home/dataverse instead
 
 - Create '/var/www/dataverse/branding'
-- Upload custom-footer.html to new directory
+- Upload branding/custom-footer.html to new directory
 - Run 'curl -X PUT -d '/var/www/dataverse/branding/custom-footer.html' http://localhost:8080/api/admin/settings/:FooterCustomizationFile'
 
 ### Custom stylesheet
@@ -26,6 +26,12 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
 
 - Upload custom-stylesheet.css to /var/www/dataverse/branding
 - Run 'curl -X PUT -d '/var/www/dataverse/branding/custom-stylesheet.css' http://localhost:8080/api/admin/settings/:StyleCustomizationFile'
+
+### Google Analytics snippet (production only)
+**TODO**: this could go in /home/dataverse instead
+
+- upload analytics-code.html to /var/www/dataverse/branding
+- Run 'curl -X PUT -d '/var/www/dataverse/branding/analytics-code.html' http://localhost:8080/api/admin/settings/:WebAnalyticsCode' 
 
 ### Adding “About” to the nav bar
 - Run curl -X PUT -d https://docs.google.com/document/d/1aJ5uHj2-J9ARUWFcov5LASsjE0GaLmWMlYkx5OS5kgo/edit?usp=sharing http://localhost:8080/api/admin/settings/:NavbarAboutUrl
