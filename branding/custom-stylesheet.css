@@ -54,6 +54,11 @@ a#dataverseForm\:j_idt390 {
     display: none;
 }
 
+/* yes, three rs are correct - sharrre.js is the js library dataverse uses */
+#actionButtonBlock a[onclick*="sharrre"] {
+    display: none;
+}
+
 #idpSelectIdPSelector a.IdPSelectDropDownToggle {
     visibility: hidden;
 }
@@ -61,9 +66,6 @@ a#dataverseForm\:j_idt390 {
 div.panel:has(> #panelCollapseDataversesFieldList) {
     display: none;
 }
-/* #panelCollapseDataversesFieldList {
-    transition: none;
-} */
 
 .ui-widget {
     /* impacts contact button, support link, search bar */
