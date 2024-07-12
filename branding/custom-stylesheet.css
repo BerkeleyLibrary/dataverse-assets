@@ -7,14 +7,14 @@ body {
 #content a,
 #content a:link
 {
-    color: #3174AF !important;
+    color: #3174AF;
 }
 
 /* default bootstrap rules getting clobbered by the above */
 .pagination > .active > a,
 .btn-primary
 {
-    color: #fff;
+    color: #fff !important;
 }
 
 /* Custom Footer */
@@ -24,7 +24,6 @@ body {
     max-width: 1170px;
     margin: 0 auto;
 }
-
 
 #custom-footer-border {
     content: "";
