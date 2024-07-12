@@ -58,6 +58,13 @@ a#dataverseForm\:j_idt390 {
     visibility: hidden;
 }
 
+div.panel:has(> #panelCollapseDataversesFieldList) {
+    display: none;
+}
+/* #panelCollapseDataversesFieldList {
+    transition: none;
+} */
+
 .ui-widget {
     /* impacts contact button, support link, search bar */
     font-family: inherit;
