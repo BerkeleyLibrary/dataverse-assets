@@ -1,5 +1,5 @@
 diff --git a/en_US/Bundle.properties b/en_US/Bundle.properties
-index 10576c0..28aa441 100644
+index 10576c0..c67c790 100644
 --- a/en_US/Bundle.properties
 +++ b/en_US/Bundle.properties
 @@ -146,9 +146,9 @@ messages.validation=Validation Error
@@ -60,3 +60,12 @@ index 10576c0..28aa441 100644
  dataset.shareBtn=Share
  
  dataset.publishBtn=Publish Dataset
+@@ -1749,7 +1749,7 @@ file.optionsBtn=File Options
+ file.optionsBtn.header.edit=Edit Options
+ file.optionsBtn.header.configure=Configure Options
+ file.editBtn=Edit File
+-file.contactBtn=Contact Owner
++file.contactBtn=Support
+ file.shareBtn=Share
+ file.share.title=Share File
+ file.share.tip=Share this file on your favorite social media networks.
