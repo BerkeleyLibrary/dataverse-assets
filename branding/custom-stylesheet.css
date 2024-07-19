@@ -12,7 +12,7 @@ body {
 
 /* default bootstrap rules getting clobbered by the above */
 .pagination > .active > a,
-.ui-paginator > .ui-paginator-pages > a.ui-paginator-pages.ui-state-active,
+.ui-paginator > .ui-paginator-pages > a.ui-state-active,
 .btn-primary
 {
     color: #fff !important;
