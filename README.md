@@ -37,7 +37,7 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
 - Run curl -X PUT -d https://docs.google.com/document/d/1aJ5uHj2-J9ARUWFcov5LASsjE0GaLmWMlYkx5OS5kgo/edit?usp=sharing http://localhost:8080/api/admin/settings/:NavbarAboutUrl
 
 ### Add text to copyright
-- Run curl -X PUT -d ", UC Regents" http://localhost:8080/api/admin/settings/:FooterCopyright
+- Run curl -X PUT -d " The Regents of the University of California" http://localhost:8080/api/admin/settings/:FooterCopyright
 
 ## Locale files
 
