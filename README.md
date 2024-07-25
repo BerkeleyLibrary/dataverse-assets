@@ -33,6 +33,12 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
 - upload analytics-code.html to /var/www/dataverse/branding
 - Run 'curl -X PUT -d '/var/www/dataverse/branding/analytics-code.html' http://localhost:8080/api/admin/settings/:WebAnalyticsCode' 
 
+### Add terms of use
+**TODO**: this could go in /home/dataverse instead
+
+- upload analytics-code.html to /var/www/dataverse/branding
+- Run 'curl -X PUT -d '/var/www/dataverse/branding/terms-of-use.html' http://localhost:8080/api/admin/settings/:ApplicationTermsOfUse' 
+
 ### Adding “About” to the nav bar
 - Run curl -X PUT -d https://docs.google.com/document/d/1aJ5uHj2-J9ARUWFcov5LASsjE0GaLmWMlYkx5OS5kgo/edit?usp=sharing http://localhost:8080/api/admin/settings/:NavbarAboutUrl
 
