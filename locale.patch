@@ -1,7 +1,16 @@
 diff --git a/en_US/Bundle.properties b/en_US/Bundle.properties
-index 10576c0..c67c790 100644
+index 10576c0..c793bad 100644
 --- a/en_US/Bundle.properties
 +++ b/en_US/Bundle.properties
+@@ -111,7 +111,7 @@ header.search.title=Search all dataverses...
+ header.about=About
+ header.support=Support
+ header.guides=Guides
+-header.guides.user=User Guide
++header.guides.user=Terms of Use
+ header.guides.developer=Developer Guide
+ header.guides.installation=Installation Guide
+ header.guides.api=API Guide
 @@ -146,9 +146,9 @@ messages.validation=Validation Error
  messages.validation.msg=Required fields were missed or there was a validation error. Please scroll down to see details.
  

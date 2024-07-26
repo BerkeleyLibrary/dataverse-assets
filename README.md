@@ -37,10 +37,14 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
 **TODO**: this could go in /home/dataverse instead
 
 - upload analytics-code.html to /var/www/dataverse/branding
-- Run 'curl -X PUT -d '/var/www/dataverse/branding/terms-of-use.html' http://localhost:8080/api/admin/settings/:ApplicationTermsOfUse' 
+- Run 'curl -X PUT -d@'/var/www/dataverse/branding/terms-of-use.html' http://localhost:8080/api/admin/settings/:ApplicationTermsOfUse' 
 
 ### Adding “About” to the nav bar
-- Run curl -X PUT -d https://docs.google.com/document/d/1aJ5uHj2-J9ARUWFcov5LASsjE0GaLmWMlYkx5OS5kgo/edit?usp=sharing http://localhost:8080/api/admin/settings/:NavbarAboutUrl
+- Run curl -X PUT -d https://docs.google.com/document/d/1aJ5uHj2-J9ARUWFcov5LASsjE0GaLmWMlYkx5OS5kgo/edit http://localhost:8080/api/admin/settings/:NavbarAboutUrl
+
+### Changing user guide navbar link to point to Terms of Use
+- Run curl -X PUT -d https://docs.google.com/document/d/1H53gxigoKSj3_MmFbgD1hOgU5OAezs_XlDvmh3i4UFM/edit http://localhost:8080/api/admin/settings/:NavbarGuidesUrl
+- Update locale files as described below
 
 ### Add text to copyright
 - Run curl -X PUT -d " The Regents of the University of California" http://localhost:8080/api/admin/settings/:FooterCopyright
