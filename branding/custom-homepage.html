@@ -1,0 +1,91 @@
+<h1 class="visually-hidden">UC Berkeley Library Dataverse</h1>
+<div class="homepage-header-block">
+     <div class="home-flex">
+          <img src="/logos/ldsp-logo.jpg" alt="LDSP logo" id="ldsp-logo"/>
+          <p class="ldsp-text"> Discover data for research, teaching, and learning at UC Berkeley</p>
+     </div>
+     <div>
+          <p>Find data across disciplines, preview metadata, and download files</p>
+     </div>
+     <div class="home-flex">
+          <label for="inputDataverseSearch">Search:</label>
+          <input id="inputDataverseSearch" class="form-control" type="text" placeholder="">
+          <span class="input-group-btn">
+                            <button id="btnDataverseSearch" class="btn btn-default bootstrap-button-tooltip"
+                                    type="button" data-original-title="Find"
+                                    onclick="window.location = '/dataverse/root?q=' + document.getElementById('inputDataverseSearch').value;return false;"><span
+                                    class="glyphicon glyphicon-search"></span><span
+                                    class="visually-hidden">Search</span> </button>
+                        </span>
+     </div>
+</div>
+<hr />
+<div>
+     <h2>Browse by Subject</h2>
+     <div id="dataversesBySubject">
+
+     </div>
+</div>
+<hr />
+<div>
+     <h2>Data Support at UC Berkeley</h2>
+     
+     <p>To archive and publish research data, please Dryad and learn how we support <a href="https://lib.berkeley.edu/research/data-services/services-tools?section=publishing-data">data publishing</a>. Visit our <a href="https://geodata.lib.berkeley.edu/">GeoData Portal</a> to find GIS data.</p>
+
+     <p> For additional data support at UC Berkeley, learn more about the <a href="https://www.lib.berkeley.edu/research/data-services">Library Data Services Program</a> and
+          <a href="https://researchdata.berkeley.edu/">Research Data Management Program</a></p>
+</div>
+
+<script type="text/javascript">
+
+   //switch baseUrl to point to a different server than the local box
+   var baseUrl = "";
+
+   // NOTE: REMOVED THUMBNAILS
+   // var thumbBaseURL = baseUrl + "/api/datasets/:persistentId/thumbnail" + "?persistentId=";
+   var metricBaseUrl = baseUrl + "/api/info/metrics/";
+
+
+
+   function querySubjectDataverseDataset(elm) {
+      var dvArray = [];
+      var fullArray = [];
+      $.ajax({url: metricBaseUrl + "datasets/bySubject", headers: { "Accept": "application/json" }, success: function(jData) {
+            jData.data.forEach(function(item) {
+               if(item.subject !== "N/A" && item.subject !== "Other") {
+                  dvArray.push([item.subject, item.count]);
+               }
+            });
+            $.ajax({url: metricBaseUrl + "datasets/bySubject", headers: { "Accept": "application/json" }, success: function(jData) {
+               console.log(jData);
+                  var resultHtml = "";
+                  jData.data.forEach(function(item) {
+                     if(item.subject !== "N/A" && item.subject !== "Other") {
+                        var dvCount = 0;
+                        for (var dvi = 0; dvi < dvArray.length; dvi++) {
+                           if(item.subject === dvArray[dvi][0]) {
+                              dvCount = dvArray[dvi][1];
+                              break;
+                           }
+                        }
+                        fullArray.push([item.subject, (item.count + dvCount -1).toLocaleString('en')]); //subtract 1 to remove root dv from counts
+                     }
+                  });
+                  fullArray.sort();
+                  fullArray.forEach(function(subject){
+                     // NOTE: The alias of the root dataverse will need to be configured in this URL
+                     // Replace spaces with concatenations (plus signs)
+                     var subjectSearchString = subject[0].replace(' ', '+');
+                     resultHtml += "<a href=\"/dataverse/licensed_data?q=&fq1=subject_ss%3A%22" + subjectSearchString + "%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order=\">" + subject[0] + "</a> <span class=\"text-muted\">(" + subject[1] + ")</span></br>";
+                  });
+                  document.getElementById(elm).innerHTML = resultHtml;
+               }});
+         }});
+   }
+
+
+
+
+   querySubjectDataverseDataset("dataversesBySubject");
+
+</script>
