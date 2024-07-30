@@ -1,5 +1,16 @@
 @import url('https://use.typekit.net/whq1fps.css');
 
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
 body {
     font-family: "source-sans-pro", "Helvetica Neue", sans-serif !important;
 }
@@ -7,15 +18,19 @@ body {
 #content a,
 #content a:link
 {
-    color: #3174AF;
+    color: #3174AF !important;
+    text-decoration: underline;
 }
 
-/* default bootstrap rules getting clobbered by the above */
-.pagination > .active > a,
-.ui-paginator > .ui-paginator-pages > a.ui-state-active,
-.btn-primary
+#content a:hover,
+#content a:link:hover
 {
-    color: #fff !important;
+    color: #3174AF !important;
+    text-decoration-thickness: 2px;
+}
+
+.navbar-brand.custom-logo {
+    margin-top: 3px;
 }
 
 /* Custom Footer */
@@ -25,6 +40,7 @@ body {
     max-width: 1170px;
     margin: 0 auto;
 }
+
 
 #custom-footer-border {
     content: "";
@@ -50,33 +66,8 @@ body {
     margin-bottom: 0.3em
 }
 
-a#dataverseForm\:j_idt390 {
+a#dataverseForm\:j_idt362 {
     display: none;
-}
-
-/* hide the share link/button. 3 Rs are correct; dataverse uses sharrre.js */
-#actionButtonBlock a[onclick*="sharrre"] {
-    display: none;
-}
-
-/* login: hide the "allow me to type the name of my institution" control  */
-#idpSelectIdPSelector a.IdPSelectDropDownToggle {
-    visibility: hidden;
-}
-
-/* advanced search: hide "Dataverses" panel */
-div.panel:has(> #panelCollapseDataversesFieldList) {
-    display: none;
-}
-
-/* account info: hide notification tab */
-#dataverseUserForm > #dataverseUserForm\:dataRelatedToMeView > ul > li:has(> a[href="#dataverseUserForm:dataRelatedToMeView:notifications"]) {
-    display: none;
-}
-
-/* impacts contact button, support link, search bar */
-.ui-widget {
-    font-family: inherit;
 }
 
 @media only screen
@@ -109,5 +100,39 @@ div.panel:has(> #panelCollapseDataversesFieldList) {
 
     .footer-navigation-menu li:last-child:after {
         content: "";
+    }
+}
+
+/* Home page */
+#ldsp-logo {
+    max-width: 300px;
+    height: auto;
+}
+
+.ldsp-text {
+    font-size: 1.5em;
+}
+
+#inputDataverseSearch {
+    max-width: 300px;
+}
+
+label[for='inputDataverseSearch'] {
+    margin-right: 6px;
+}
+
+#dataversesBySubject {
+    column-count: 2;
+}
+
+@media only screen and
+(min-width: 800px) {
+    .home-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .ldsp-text {
+        margin-left: 20px;
     }
 }
