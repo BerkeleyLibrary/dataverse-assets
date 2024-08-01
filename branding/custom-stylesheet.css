@@ -29,6 +29,14 @@ body {
     text-decoration-thickness: 2px;
 }
 
+/* default bootstrap rules getting clobbered by the above */
+.pagination > .active > a,
+.ui-paginator > .ui-paginator-pages > a.ui-state-active,
+.btn-primary
+{
+    color: #fff !important;
+}
+
 .navbar-brand.custom-logo {
     margin-top: 3px;
 }
@@ -68,6 +76,31 @@ body {
 
 a#dataverseForm\:j_idt362 {
     display: none;
+}
+
+/* hide the share link/button. 3 Rs are correct; dataverse uses sharrre.js */
+#actionButtonBlock a[onclick*="sharrre"] {
+    display: none;
+}
+
+/* login: hide the "allow me to type the name of my institution" control  */
+#idpSelectIdPSelector a.IdPSelectDropDownToggle {
+    visibility: hidden;
+}
+
+/* advanced search: hide "Dataverses" panel */
+div.panel:has(> #panelCollapseDataversesFieldList) {
+    display: none;
+}
+
+/* account info: hide notification tab */
+#dataverseUserForm > #dataverseUserForm\:dataRelatedToMeView > ul > li:has(> a[href="#dataverseUserForm:dataRelatedToMeView:notifications"]) {
+    display: none;
+}
+
+/* impacts contact button, support link, search bar */
+.ui-widget {
+    font-family: inherit;
 }
 
 @media only screen
