@@ -1,8 +1,8 @@
 diff --git a/en_US/Bundle.properties b/en_US/Bundle.properties
-index 10576c0..c793bad 100644
+index 692ab9e..0122ab3 100644
 --- a/en_US/Bundle.properties
 +++ b/en_US/Bundle.properties
-@@ -111,7 +111,7 @@ header.search.title=Search all dataverses...
+@@ -112,7 +112,7 @@ header.search.title=Search all dataverses...
  header.about=About
  header.support=Support
  header.guides=Guides
@@ -11,7 +11,7 @@ index 10576c0..c793bad 100644
  header.guides.developer=Developer Guide
  header.guides.installation=Installation Guide
  header.guides.api=API Guide
-@@ -146,9 +146,9 @@ messages.validation=Validation Error
+@@ -147,9 +147,9 @@ messages.validation=Validation Error
  messages.validation.msg=Required fields were missed or there was a validation error. Please scroll down to see details.
  
  # contactFormFragment.xhtml
@@ -24,7 +24,7 @@ index 10576c0..c793bad 100644
  contact.to=To
  contact.cc=CC
  contact.support=Support
-@@ -168,7 +168,7 @@ contact.sum.title=Human Access Validation Answer
+@@ -170,7 +170,7 @@ contact.sum.title=Human Access Validation Answer
  contact.sum.required=Value is required.
  contact.sum.invalid=Incorrect sum, please try again.
  contact.sum.converterMessage=Please enter a number.
@@ -33,7 +33,7 @@ index 10576c0..c793bad 100644
  # Bundle file editors, please note that these "contact.context" messages are used in tests.
  contact.context.subject.dvobject={0} contact: {1}
  contact.context.subject.support={0} support request: {1}
-@@ -310,7 +310,7 @@ user.position.tip=Your role or title at the organization you are affiliated with
+@@ -313,7 +313,7 @@ user.position.tip=Your role or title at the organization you are affiliated with
  user.acccountterms=General Terms of Use
  user.acccountterms.tip=The terms and conditions for using the application and services.
  user.acccountterms.required=Please check the box to indicate your acceptance of the General Terms of Use.
@@ -42,7 +42,7 @@ index 10576c0..c793bad 100644
  user.createBtn=Create Account
  user.updatePassword.welcome=Welcome to Dataverse {0}
  user.updatePassword.warning=Our terms of use have changed, please check the box below and click Continue.
-@@ -364,7 +364,7 @@ login.System=Login System
+@@ -367,7 +367,7 @@ login.System=Login System
  login.forgot.text=Forgot your password?
  login.builtin=Dataverse Account
  login.institution=Institutional Account
@@ -51,16 +51,16 @@ index 10576c0..c793bad 100644
  login.institution.support.blurbwithLink=Leaving your institution? Please contact {0} for assistance.
  login.builtin.credential.usernameOrEmail=Username/Email
  login.builtin.credential.password=Password
-@@ -874,7 +874,7 @@ dataverse.publish.btn=Publish
+@@ -880,7 +880,7 @@ dataverse.publish.btn=Publish
  dataverse.publish.header=Publish Dataverse
  dataverse.nopublished=No Published Dataverses
- dataverse.nopublished.tip=In order to use this feature you must have at least one published dataverse.
+ dataverse.nopublished.tip=In order to use this feature you must have at least one published or linked dataverse.
 -dataverse.contact=Email Dataverse Contact
 +dataverse.contact=Contact UC Berkeley Library Data Services Program
  dataverse.link=Link Dataverse
  dataverse.link.btn.tip=Link to Your Dataverse
  dataverse.link.yourDataverses=Your Dataverse
-@@ -1403,7 +1403,7 @@ dataset.accessBtn.too.big=The dataset is too large to download. Please select th
+@@ -1409,7 +1409,7 @@ dataset.accessBtn.too.big=The dataset is too large to download. Please select th
  dataset.accessBtn.original.too.big=The dataset is too large to download in the original format. Please select the files you need from the files table.
  dataset.accessBtn.archival.too.big=The dataset is too large to download in the archival format. Please select the files you need from the files table.
  dataset.linkBtn=Link Dataset
@@ -69,7 +69,7 @@ index 10576c0..c793bad 100644
  dataset.shareBtn=Share
  
  dataset.publishBtn=Publish Dataset
-@@ -1749,7 +1749,7 @@ file.optionsBtn=File Options
+@@ -1756,7 +1756,7 @@ file.optionsBtn=File Options
  file.optionsBtn.header.edit=Edit Options
  file.optionsBtn.header.configure=Configure Options
  file.editBtn=Edit File
