@@ -18,14 +18,14 @@ body {
 #content a,
 #content a:link
 {
-    color: #3174AF !important;
+    color: #3174AF;
     text-decoration: underline;
 }
 
 #content a:hover,
 #content a:link:hover
 {
-    color: #3174AF !important;
+    color: #3174AF;
     text-decoration-thickness: 2px;
 }
 
