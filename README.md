@@ -36,8 +36,14 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
 ### Add terms of use
 **TODO**: this could go in /home/dataverse instead
 
-- upload analytics-code.html to /var/www/dataverse/branding
+- upload terms-of-use.html to /var/www/dataverse/branding
 - Run 'curl -X PUT -d@'/var/www/dataverse/branding/terms-of-use.html' http://localhost:8080/api/admin/settings/:ApplicationTermsOfUse' 
+
+### Add custom home page
+**TODO**: this could go in /home/dataverse instead
+
+- upload custom-homepage.html to /var/www/dataverse/branding
+- Run 'curl -X PUT -d@'/var/www/dataverse/branding/custom-homepage.html' http://localhost:8080/api/admin/settings/:HomePageCustomizationFile'
 
 ### Adding “About” to the nav bar
 - Run curl -X PUT -d https://docs.google.com/document/d/1aJ5uHj2-J9ARUWFcov5LASsjE0GaLmWMlYkx5OS5kgo/edit http://localhost:8080/api/admin/settings/:NavbarAboutUrl
