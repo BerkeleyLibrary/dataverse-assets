@@ -72,11 +72,13 @@ Presuming that this repo is checked out or accessible from /home/dataverse/datav
 
 This should only be necessary when you upgrade Dataverse.
 
-- Run git clone https://github.com/GlobalDataverseCommunityConsortium/dataverse-language-packs.git ; cd dataverse-language-packs
-- Run git checkout dataverse-v6.1 (or whatever the appropriate tag is for youer version)
-- Run cp -R en_US/* ../langBundles 
-- Run cd ../langBundles
+- Run git clone https://github.com/iqss/dataverse 
+- Run git checkout v6.3 (or whatever the appropriate tag is for your version)
+- Run cd 
+- Run cp dataverse/src/main/propertyFiles/* langBundles 
+- Run cd langBundles
 - Run git apply ../locale.patch
 - Review any differences, confirm they're correct 
-- Create a new patch file (git diff -p > ../locale.patch)
 - Commit your changes
+
+Occasionally, you may need to create a new patch file.

@@ -1,7 +1,7 @@
-diff --git a/en_US/Bundle.properties b/en_US/Bundle.properties
+diff --git a/langBundles/Bundle.properties b/langBundles/Bundle.properties
 index 692ab9e..0122ab3 100644
---- a/en_US/Bundle.properties
-+++ b/en_US/Bundle.properties
+--- a/langBundles/Bundle.properties
++++ b/langBundles/Bundle.properties
 @@ -112,7 +112,7 @@ header.search.title=Search all dataverses...
  header.about=About
  header.support=Support
