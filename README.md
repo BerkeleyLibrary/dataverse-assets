@@ -64,27 +64,5 @@ Many display strings are managed in the Dataverse's locale files. See upstream [
 Presuming that this repo is checked out or accessible from /home/dataverse/dataverse-assets:
 
 - Run ./asadmin create-jvm-options '-Ddataverse.lang.directory=/home/dataverse/dataverse-assets/langBundles'
-- Restart Dataverse
-
-### Manual process
-
-- Run mkdir /tmp/languages
-- Run cp -R langBundles/*.properties /tmp/languages
-- Run cd /tmp/languages
-- Run zip languages.zip *.properties
-- Run curl http://localhost:8080/api/admin/datasetfield/loadpropertyfiles -X POST --upload-file /tmp/languages/languages.zip -H "Content-Type: application/zip"
-
-### Updating locale files from upstream
-
-This should only be necessary when you upgrade Dataverse.
-
-- Run git clone https://github.com/iqss/dataverse 
-- Run git checkout v6.3 (or whatever the appropriate tag is for your version)
-- Run cd 
-- Run cp dataverse/src/main/propertyFiles/* langBundles 
-- Run cd langBundles
-- Run git apply ../locale.patch
-- Review any differences, confirm they're correct 
-- Commit your changes
-
-Occasionally, you may need to create a new patch file.
+- Run ./asadmin create-jvm-options '-Duser.variant=x-ucb'
+- Restart Dataverse (`systemctl restart payara.service`)
