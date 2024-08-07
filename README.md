@@ -14,11 +14,16 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
     - 'curl -X PUT -d '/logos/navbar/dataverse_logo_prod.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile'
     - 'curl -X PUT -d '/logos/navbar/dataverse_logo_staging.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile'
 
+### Custom Homepage
+
+- Create '/var/www/dataverse/branding'
+- Upload branding/custom-homepage.html to new directory
+- Run 'curl -X PUT -d '/var/www/dataverse/branding/custom-homepage.html' http://localhost:8080/api/admin/settings/:HomePageCustomizationFile'
+
 ### Custom footer
 **TODO**: this could go in /home/dataverse instead
 
-- Create '/var/www/dataverse/branding'
-- Upload branding/custom-footer.html to new directory
+- Upload branding/custom-footer.html to /var/www/dataverse/branding
 - Run 'curl -X PUT -d '/var/www/dataverse/branding/custom-footer.html' http://localhost:8080/api/admin/settings/:FooterCustomizationFile'
 
 ### Custom stylesheet
