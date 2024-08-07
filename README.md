@@ -41,8 +41,14 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
 ### Add terms of use
 **TODO**: this could go in /home/dataverse instead
 
-- upload analytics-code.html to /var/www/dataverse/branding
+- upload terms-of-use.html to /var/www/dataverse/branding
 - Run 'curl -X PUT -d@'/var/www/dataverse/branding/terms-of-use.html' http://localhost:8080/api/admin/settings/:ApplicationTermsOfUse' 
+
+### Add custom home page
+**TODO**: this could go in /home/dataverse instead
+
+- upload custom-homepage.html to /var/www/dataverse/branding
+- Run 'curl -X PUT -d@'/var/www/dataverse/branding/custom-homepage.html' http://localhost:8080/api/admin/settings/:HomePageCustomizationFile'
 
 ### Adding “About” to the nav bar
 - Run curl -X PUT -d https://docs.google.com/document/d/1aJ5uHj2-J9ARUWFcov5LASsjE0GaLmWMlYkx5OS5kgo/edit http://localhost:8080/api/admin/settings/:NavbarAboutUrl
@@ -77,11 +83,13 @@ Presuming that this repo is checked out or accessible from /home/dataverse/datav
 
 This should only be necessary when you upgrade Dataverse.
 
-- Run git clone https://github.com/GlobalDataverseCommunityConsortium/dataverse-language-packs.git ; cd dataverse-language-packs
-- Run git checkout dataverse-v6.1 (or whatever the appropriate tag is for youer version)
-- Run cp -R en_US/* ../langBundles 
-- Run cd ../langBundles
+- Run git clone https://github.com/iqss/dataverse 
+- Run git checkout v6.3 (or whatever the appropriate tag is for your version)
+- Run cd 
+- Run cp dataverse/src/main/propertyFiles/* langBundles 
+- Run cd langBundles
 - Run git apply ../locale.patch
 - Review any differences, confirm they're correct 
-- Create a new patch file (git diff -p > ../locale.patch)
 - Commit your changes
+
+Occasionally, you may need to create a new patch file.
