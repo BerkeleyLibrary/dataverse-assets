@@ -8,8 +8,8 @@ See [Dataverse's "Branding Your Installation"](https://guides.dataverse.org/en/l
 
 ### Logos
 
-- Create ‘/usr/local/payara6/glassfish/domains/domain1/docroot/logos/navbar/'
-- Copy contents of logos/navbar to new directory
+- Create ‘/usr/local/payara6/glassfish/domains/domain1/docroot/logos'
+- Copy contents of logos to new directory
 - run either:
     - 'curl -X PUT -d '/logos/navbar/dataverse_logo_prod.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile'
     - 'curl -X PUT -d '/logos/navbar/dataverse_logo_staging.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile'
