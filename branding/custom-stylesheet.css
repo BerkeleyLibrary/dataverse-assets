@@ -165,8 +165,11 @@ label[for='inputDataverseSearch'] {
     margin-right: 6px;
 }
 
-#dataversesBySubject {
+ol#dataversesBySubject {
     column-count: 2;
+    list-style-type: none;
+    padding: 0;
+    margin: 0
 }
 
 @media only screen and
