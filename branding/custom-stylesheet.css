@@ -15,6 +15,18 @@ body {
     font-family: "source-sans-pro", "Helvetica Neue", sans-serif !important;
 }
 
+body > a.sr-only[href="#content"]:active,
+body > a.sr-only[href="#content"]:focus
+{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    z-index: 10000;
+}
+
 .dataverseHeaderCell.dataverseHeaderName h1 {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
