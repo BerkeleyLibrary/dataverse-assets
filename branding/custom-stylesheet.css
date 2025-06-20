@@ -50,6 +50,7 @@ body {
 
 .navbar-brand.custom-logo {
     margin-top: 3px;
+    max-width: 100%;
 }
 
 /* Custom Footer */
