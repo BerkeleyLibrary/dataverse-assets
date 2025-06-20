@@ -39,14 +39,16 @@ body > a.sr-only[href="#content"]:focus
 }
 
 #content a,
-#content a:link
+#content a:link,
+.btn-link
 {
     color: #3174AF;
     text-decoration: underline;
 }
 
 #content a:hover,
-#content a:link:hover
+#content a:link:hover,
+.btn-link
 {
     color: #3174AF;
     text-decoration-thickness: 2px;
