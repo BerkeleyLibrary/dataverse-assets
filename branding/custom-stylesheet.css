@@ -15,6 +15,18 @@ body {
     font-family: "source-sans-pro", "Helvetica Neue", sans-serif !important;
 }
 
+body > a.sr-only[href="#content"]:active,
+body > a.sr-only[href="#content"]:focus
+{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    z-index: 10000;
+}
+
 .dataverseHeaderCell.dataverseHeaderName h1 {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
@@ -27,17 +39,26 @@ body {
 }
 
 #content a,
-#content a:link
+#content a:link,
+.btn-link
 {
     color: #3174AF;
     text-decoration: underline;
 }
 
 #content a:hover,
-#content a:link:hover
+#content a:link:hover,
+.btn-link
 {
     color: #3174AF;
     text-decoration-thickness: 2px;
+}
+
+a:focus,
+#navbarFixed form.navbar-form-link a.ui-commandlink:focus
+{
+    outline: auto 2px Highlight;
+    outline: auto 5px -webkit-focus-ring-color;
 }
 
 /* default bootstrap rules getting clobbered by the above */
@@ -50,6 +71,7 @@ body {
 
 .navbar-brand.custom-logo {
     margin-top: 3px;
+    max-width: 100%;
 }
 
 /* Custom Footer */
@@ -165,8 +187,11 @@ label[for='inputDataverseSearch'] {
     margin-right: 6px;
 }
 
-#dataversesBySubject {
+ol#dataversesBySubject {
     column-count: 2;
+    list-style-type: none;
+    padding: 0;
+    margin: 0
 }
 
 @media only screen and

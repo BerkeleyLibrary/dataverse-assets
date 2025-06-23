@@ -22,9 +22,9 @@
 <hr />
 <div>
      <h2>Browse by Subject</h2>
-     <div id="dataversesBySubject">
+     <ol id="dataversesBySubject">
 
-     </div>
+     </ol>
 </div>
 <hr />
 <div>
@@ -77,7 +77,7 @@
                      // NOTE: The alias of the root dataverse will need to be configured in this URL
                      // Replace spaces with concatenations (plus signs)
                      var subjectSearchString = subject[0].replace(' ', '+');
-                     resultHtml += "<a href=\"/dataverse/licensed_data?q=&fq1=subject_ss%3A%22" + subjectSearchString + "%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order=\">" + subject[0] + "</a> <span class=\"text-muted\">(" + subject[1] + ")</span></br>";
+                     resultHtml += "<li class=\"subject-term\"><a href=\"/dataverse/licensed_data?q=&fq1=subject_ss%3A%22" + subjectSearchString + "%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order=\">" + subject[0] + "</a> <span class=\"text-muted\">(" + subject[1] + ")</span></li>";
                   });
                   document.getElementById(elm).innerHTML = resultHtml;
                }});
