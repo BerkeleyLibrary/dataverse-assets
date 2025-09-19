@@ -1,8 +1,6 @@
-diff --git a/langBundles/Bundle.properties b/langBundles/Bundle.properties
-index 692ab9e..0122ab3 100644
---- a/langBundles/Bundle.properties
-+++ b/langBundles/Bundle.properties
-@@ -112,7 +112,7 @@ header.search.title=Search all dataverses...
+--- a/langBundles/Bundle.properties	2025-09-22 16:48:57.734091040 -0700
++++ b/langBundles/Bundle.properties	2025-09-22 16:48:11.492439960 -0700
+@@ -129,7 +129,7 @@
  header.about=About
  header.support=Support
  header.guides=Guides
@@ -11,7 +9,7 @@ index 692ab9e..0122ab3 100644
  header.guides.developer=Developer Guide
  header.guides.installation=Installation Guide
  header.guides.api=API Guide
-@@ -147,9 +147,9 @@ messages.validation=Validation Error
+@@ -164,9 +164,9 @@
  messages.validation.msg=Required fields were missed or there was a validation error. Please scroll down to see details.
  
  # contactFormFragment.xhtml
@@ -24,7 +22,7 @@ index 692ab9e..0122ab3 100644
  contact.to=To
  contact.cc=CC
  contact.support=Support
-@@ -170,7 +170,7 @@ contact.sum.title=Human Access Validation Answer
+@@ -187,7 +187,7 @@
  contact.sum.required=Value is required.
  contact.sum.invalid=Incorrect sum, please try again.
  contact.sum.converterMessage=Please enter a number.
@@ -33,7 +31,7 @@ index 692ab9e..0122ab3 100644
  # Bundle file editors, please note that these "contact.context" messages are used in tests.
  contact.context.subject.dvobject={0} contact: {1}
  contact.context.subject.support={0} support request: {1}
-@@ -313,7 +313,7 @@ user.position.tip=Your role or title at the organization you are affiliated with
+@@ -350,7 +350,7 @@
  user.acccountterms=General Terms of Use
  user.acccountterms.tip=The terms and conditions for using the application and services.
  user.acccountterms.required=Please check the box to indicate your acceptance of the General Terms of Use.
@@ -42,16 +40,18 @@ index 692ab9e..0122ab3 100644
  user.createBtn=Create Account
  user.updatePassword.welcome=Welcome to Dataverse {0}
  user.updatePassword.warning=Our terms of use have changed, please check the box below and click Continue.
-@@ -367,7 +367,7 @@ login.System=Login System
+@@ -404,9 +404,8 @@
  login.forgot.text=Forgot your password?
  login.builtin=Dataverse Account
  login.institution=Institutional Account
 -login.institution.blurb=Log in or sign up with your institutional account &mdash; more <a href="{0}/{1}/user/account.html" title="Account Creation + Management - Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
 +login.institution.blurb=Login with your UC Berkeley or Lawrence Berkeley National Lab Account to view and download data &mdash; more <a href="{0}/{1}/user/account.html" title="Account Creation + Management - Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
  login.institution.support.blurbwithLink=Leaving your institution? Please contact {0} for assistance.
+-login.institution.wayfinder.blurb=<b>Please note</b> the change in the login workflow: clicking the button below will redirect you to our federation service provider, <a href="https://incommon.org/federation/">InCommon.org</a>, and you will select your institution from the list of participating authentication services there. 
  login.builtin.credential.usernameOrEmail=Username/Email
  login.builtin.credential.password=Password
-@@ -880,7 +880,7 @@ dataverse.publish.btn=Publish
+ login.builtin.invalidUsernameEmailOrPassword=The username, email address, or password you entered is invalid. Need assistance accessing your account?
+@@ -948,7 +947,7 @@
  dataverse.publish.header=Publish Dataverse
  dataverse.nopublished=No Published Dataverses
  dataverse.nopublished.tip=In order to use this feature you must have at least one published or linked dataverse.
@@ -60,16 +60,24 @@ index 692ab9e..0122ab3 100644
  dataverse.link=Link Dataverse
  dataverse.link.btn.tip=Link to Your Dataverse
  dataverse.link.yourDataverses=Your Dataverse
-@@ -1409,7 +1409,7 @@ dataset.accessBtn.too.big=The dataset is too large to download. Please select th
- dataset.accessBtn.original.too.big=The dataset is too large to download in the original format. Please select the files you need from the files table.
+@@ -1030,7 +1029,6 @@
+ dataverse.update.featuredItems.error.invalidType=Unknown 'type' must be one of {0}
+ dataverse.update.featuredItems.error.typeAndDvObjectMismatch=The 'type' passed does not match the dvObject type.
+ dataverse.delete.featuredItems.success=All featured items of this Dataverse have been successfully deleted.
+-dataverse.createTemplate.error.jsonParseMetadataFields=Error parsing the POSTed template dataset fields: {0}
+ # rolesAndPermissionsFragment.xhtml
+ 
+ # advanced.xhtml
+@@ -1503,7 +1501,7 @@
  dataset.accessBtn.archival.too.big=The dataset is too large to download in the archival format. Please select the files you need from the files table.
  dataset.linkBtn=Link Dataset
+ dataset.unlinkBtn=Unlink Dataset
 -dataset.contactBtn=Contact Owner
 +dataset.contactBtn=Support
  dataset.shareBtn=Share
  
  dataset.publishBtn=Publish Dataset
-@@ -1756,7 +1756,7 @@ file.optionsBtn=File Options
+@@ -1886,7 +1884,7 @@
  file.optionsBtn.header.edit=Edit Options
  file.optionsBtn.header.configure=Configure Options
  file.editBtn=Edit File
