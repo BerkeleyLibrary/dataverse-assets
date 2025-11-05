@@ -13,13 +13,38 @@
           <span class="input-group-btn">
                             <button id="btnDataverseSearch" class="btn btn-default bootstrap-button-tooltip"
                                     type="button" data-original-title="Find"
-                                    onclick="window.location = '/dataverse/licensed_data?q=' + document.getElementById('inputDataverseSearch').value;return false;"><span
+                                    onclick="window.location = '/dataverse/ucblib?q=' + document.getElementById('inputDataverseSearch').value;return false;"><span
                                     class="glyphicon glyphicon-search"></span><span
                                     class="visually-hidden">Search</span> </button>
                         </span>
      </div>
 </div>
 <hr />
+<h2>Browse by Collection</h2>
+<div id="carouselBlocksWrapper" class="row">
+   <div class="col-xs-12">
+      <div class="customNavigation">
+            <a class="btn prev1" title="Previous" style="display: none;"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      </div>
+      <div id="featuredDataversesList" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+               <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 1296px; left: 0px; display: block;"><div class="owl-item" style="width: 216px;"><div class="item" style="vertical-align: middle; height: 122px;">
+                  <a href="/dataverse/licensed_data"><img src="https://datasets.lib.berkeley.edu/logos/105016/concept_10182022 outline FINAL_version 2.jpg" alt="UC Berkeley Library Licensed Data logo"><span class="show">UC Berkeley Library Licensed Data</span>
+                  </a>
+               </div></div><div class="owl-item" style="width: 216px;"><div class="item" style="vertical-align: middle; height: 122px;">
+                  <a href="/dataverse/oskidata"><img src="https://datasets.lib.berkeley.edu/logos/6/Berkeley_GraphicElements_CroppedSeal_Blue_RGB 3.png" alt="UC Berkeley Faculty Research Data logo"><span class="show">UC Berkeley Faculty Research Data</span>
+                  </a>
+               </div></div><div class="owl-item" style="width: 216px;"><div class="item" style="vertical-align: middle; height: 122px;">
+                  <a href="/dataverse/igs"><img src="https://datasets.lib.berkeley.edu/logos/2/igs_poll_logo_fitted_for_fcb.png" alt="Institute of Governmental Studies Polls logo"><span class="show">Institute of Governmental Studies Polls</span>
+                  </a>
+               </div></div>
+            </div>
+         </div>
+      </div>
+      <div class="customNavigation">
+            <a class="btn next1" title="Next" style="display: none;"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+   </div>
+</div>
 <div>
      <h2>Browse by Subject</h2>
      <ol id="dataversesBySubject">
@@ -30,11 +55,10 @@
 <div>
      <h2>Research Data Support at UC Berkeley</h2>
      
-     <p>To archive and publish research data, learn how we support <a href="https://www.lib.berkeley.edu/research/data-services/services-tools?section=publishing-data">research data publishing</a>. Visit our
-          <a href="https://geodata.lib.berkeley.edu/">GeoData Portal</a> to find GIS data.</p>
-     
-     <p>For additional research data support at UC Berkeley, learn more about the <a href="https://www.lib.berkeley.edu/research/data-services">Library Data Services Program</a> and
-          <a href="https://researchdata.berkeley.edu/">Research Data Management Program</a>.</p>
+     <p>For additional research data support at UC Berkeley, contact our
+          <a href="https://researchdata.berkeley.edu/">Research Data Management Program</a>. To find GIS data, visit the Library's 
+          <a href="https://geodata.lib.berkeley.edu/">GeoData Portal</a>.
+     </p>
 </div>
 
 <script type="text/javascript">
@@ -57,7 +81,7 @@
                   dvArray.push([item.subject, item.count]);
                }
             });
-            $.ajax({url: metricBaseUrl + "datasets/bySubject", headers: { "Accept": "application/json" }, success: function(jData) {
+            $.ajax({url: metricBaseUrl + "datasets/bySubject?dataLocation=all", headers: { "Accept": "application/json" }, success: function(jData) {
                console.log(jData);
                   var resultHtml = "";
                   jData.data.forEach(function(item) {
@@ -69,7 +93,7 @@
                               break;
                            }
                         }
-                        fullArray.push([item.subject, (item.count + dvCount -1).toLocaleString('en')]); //subtract 1 to remove root dv from counts
+                        fullArray.push([item.subject, (item.count).toLocaleString('en')]);
                      }
                   });
                   fullArray.sort();
@@ -77,7 +101,7 @@
                      // NOTE: The alias of the root dataverse will need to be configured in this URL
                      // Replace spaces with concatenations (plus signs)
                      var subjectSearchString = subject[0].replace(' ', '+');
-                     resultHtml += "<li class=\"subject-term\"><a href=\"/dataverse/licensed_data?q=&fq1=subject_ss%3A%22" + subjectSearchString + "%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order=\">" + subject[0] + "</a> <span class=\"text-muted\">(" + subject[1] + ")</span></li>";
+                     resultHtml += "<li class=\"subject-term\"><a href=\"/dataverse/ucblib?q=&fq1=subject_ss%3A%22" + subjectSearchString + "%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order=\">" + subject[0] + "</a> <span class=\"text-muted\">(" + subject[1] + ")</span></li>";
                   });
                   document.getElementById(elm).innerHTML = resultHtml;
                }});
