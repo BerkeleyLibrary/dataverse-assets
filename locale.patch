@@ -1,5 +1,5 @@
 diff --git a/src/main/java/propertyFiles/Bundle.properties b/src/main/java/propertyFiles/Bundle.properties
-index a07546284e..04a9904568 100644
+index a07546284e..ccf5c16652 100644
 --- a/src/main/java/propertyFiles/Bundle.properties
 +++ b/src/main/java/propertyFiles/Bundle.properties
 @@ -129,7 +129,7 @@ header.search.title=Search all dataverses...
@@ -42,6 +42,15 @@ index a07546284e..04a9904568 100644
  user.createBtn=Create Account
  user.updatePassword.welcome=Welcome to Dataverse {0}
  user.updatePassword.warning=Our terms of use have changed, please check the box below and click Continue.
+@@ -404,7 +404,7 @@ login.System=Login System
+ login.forgot.text=Forgot your password?
+ login.builtin=Dataverse Account
+ login.institution=Institutional Account
+-login.institution.blurb=Log in or sign up with your institutional account &mdash; more <a href="{0}/{1}/user/account.html" title="Account Creation + Management - Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
++login.institution.blurb=Login with your UC Berkeley or Lawrence Berkeley National Lab Account to view and download data &mdash; more <a href="{0}/{1}/user/account.html" title="Account Creation + Management - Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
+ login.institution.support.blurbwithLink=Leaving your institution? Please contact {0} for assistance.
+ login.institution.wayfinder.blurb=<b>Please note</b> the change in the login workflow: clicking the button below will redirect you to our federation service provider, <a href="https://incommon.org/federation/">InCommon.org</a>, and you will select your institution from the list of participating authentication services there. 
+ login.builtin.credential.usernameOrEmail=Username/Email
 @@ -948,7 +948,7 @@ dataverse.publish.btn=Publish
  dataverse.publish.header=Publish Dataverse
  dataverse.nopublished=No Published Dataverses
