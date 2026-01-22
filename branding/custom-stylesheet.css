@@ -71,8 +71,14 @@ a:focus,
     color: #fff !important;
 }
 
+.navbar-header {
+    float: left;
+    min-width: 460px;
+}
+
 .navbar-brand.custom-logo {
-    margin-top: 3px;
+    margin-top: 6px;
+    width: 460px;
     max-width: 100%;
 }
 
