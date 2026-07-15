@@ -85,11 +85,13 @@ This should only be necessary when you upgrade Dataverse.
 
 - Run git clone https://github.com/iqss/dataverse 
 - Run git checkout v6.3 (or whatever the appropriate tag is for your version)
-- Run cd 
-- Run cp dataverse/src/main/propertyFiles/* langBundles 
-- Run cd langBundles
-- Run git apply ../locale.patch
+- Run cd dataverse
+- Run git apply --3way ../locale.patch
+- Run cd ..
+- Run cp dataverse/src/main/java/propertyFiles/*.properties langBundles 
 - Review any differences, confirm they're correct 
 - Commit your changes
 
-Occasionally, you may need to create a new patch file.
+The patch is applied before copying files into `langBundles` because `locale.patch` targets Dataverse's upstream `src/main/java/propertyFiles` path. The `--3way` option helps Git apply the Berkeley customizations when upstream adds nearby locale keys between releases.
+
+Occasionally, you may need to create a new patch file if upstream changes the relevant locale keys too much for `git apply --3way` to resolve.
